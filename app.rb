@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require('./lib/parcels')
+require('./lib/contact')
 
 get('/') do
   @description = "___"
