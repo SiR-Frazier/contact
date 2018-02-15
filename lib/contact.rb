@@ -6,6 +6,6 @@ class Contact
   end
 
   def upcase
-    # code here
+    @name.upcase
   end
 end
