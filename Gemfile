@@ -4,3 +4,4 @@ gem('sinatra')
 gem('rspec')
 gem('pry')
 gem('capybara')
+ruby '2.4.1'
