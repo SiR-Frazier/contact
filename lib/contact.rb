@@ -14,7 +14,7 @@ class Contact
   end
 
   def upcase
-    @name.upcase
+    @address.upcase
   end
 
   def self.all()
@@ -35,6 +35,20 @@ class Contact
         return item
       end
     end
+  end
+end
+
+class Address < Contact
+  attr_accessor :address, :city
+
+  def initialize(attributes)
+    @address = attributes.fetch(:address)
+    @city = attributes.fetch(:city)
+  end
+
+  def downcase
+    @address.downcase
+    # @city.downcase
   end
 
 end

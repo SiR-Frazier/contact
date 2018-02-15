@@ -6,8 +6,8 @@ describe(Contact) do
 
   describe("#upcase") do
     it("upcase contact name") do
-      instance = Contact.new({:name=> "Henry", :address=> "123 NE Knott", :city=> "Portland, OR"})
-      expect(instance.upcase()).to(eq("HENRY"))
+      instance = Contact.new({:name=> "Henry", :address=> "knott", :city=> "Portland, OR"})
+      expect(instance.upcase()).to(eq("KNOTT"))
     end
   end
 
@@ -38,5 +38,22 @@ describe(Contact) do
       expect(Contact.find("Freddy")).to(eq(instance))
     end
   end
-
 end # Contacts
+
+describe(Address) do
+
+  describe("#downcase") do
+    it("downcase address") do
+    instance = Address.new({:address=> "123 NE Skidmore Street", :city=> "PDX"})
+    expect(instance.downcase()).to(eq("123 ne skidmore street"))
+    end
+  end
+
+  describe("#upcase") do
+    it("downcase address") do
+    instance = Address.new({:address=> "miami", :city=> "LA"})
+    expect(instance.upcase()).to(eq("MIAMI"))
+    end
+  end
+
+end
