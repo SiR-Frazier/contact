@@ -15,6 +15,7 @@ describe(Contact) do
     it ("saves contact to list of contacts") do
       one = Contact.new({:name=> "Sophia", :address=> "33 Fremont", :city=> "Portland, OR"})
       two = Contact.new({:name=> "Mr. Jonz", :address=> "11 Burnside", :city=> "Portland, OR"})
+      Contact.clear()
       one.save()
       two.save()
       expect(Contact.all()).to(eq([one, two]))
