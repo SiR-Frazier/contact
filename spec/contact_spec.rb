@@ -21,4 +21,21 @@ describe(Contact) do
     end
   end
 
+  describe(".clear") do
+    it("clears all items from the list") do
+      instance = Contact.new({:name=> "Channing", :address=> "21 Jumpstreet", :city=> "PDX"})
+      instance.save()
+      Contact.clear()
+      expect(Contact.all()).to(eq([]))
+    end
+  end
+
+  describe(".find") do
+    it("finds a contact based on the name") do
+      instance = Contact.new({:name=> "Freddy", :address=> "123 Elm Street", :city=> "PDX"})
+      instance.save()
+      expect(Contact.find("Freddy")).to(eq(instance))
+    end
+  end
+
 end # Contacts

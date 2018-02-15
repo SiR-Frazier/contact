@@ -16,8 +16,8 @@
   <div id="output">
     <h2>Here are your contacts: </h2><br>
 
-    <% @contacts.each do |x| %>
-    <h4><a><%= x.name %></a></h4>
+    <% @contacts.each do |contact| %>
+    <h4><a href="/info/<%= contact.name %>"><%= contact.name %></a></h4>
     <% end %>
 
   </div>

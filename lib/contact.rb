@@ -25,4 +25,16 @@ class Contact
     @@people.push(self)
   end
 
+  def self.clear
+    @@people = []
+  end
+
+  def self.find(x)
+    @@people.each do |item|
+      if item.name == x
+        return item
+      end
+    end
+  end
+
 end

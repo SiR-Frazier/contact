@@ -17,3 +17,8 @@ post('/') do
   @contacts = Contact.all()
   erb(:home)
 end
+
+get('/info/:name') do
+  @contact = Contact.find(params[:name])
+  erb(:info)
+end
