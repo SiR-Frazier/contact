@@ -11,4 +11,14 @@ describe(Contact) do
     end
   end
 
+  describe("#save") do
+    it ("saves contact to list of contacts") do
+      one = Contact.new("Sophia", "33 Fremont", "PDX")
+      two = Contact.new("Mr. Jonz", "11 Burnside", "PDX")
+      one.save()
+      two.save()
+      expect(Contact.all()).to(eq([one, two]))
+    end
+  end
+
 end # Contacts
