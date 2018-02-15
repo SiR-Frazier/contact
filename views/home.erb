@@ -13,12 +13,12 @@
     <input name="city" class="form-control" type="text" placeholder= "city"><br>
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
-  <!-- <div id="output">
-    <h2>HERE'S A LIST!</h2><br>
+  <div id="output">
+    <h2>Here are your contacts: </h2><br>
 
-    <% @list.each do |x| %>
-    <h4><%= x.cityname %></a></h4>
+    <% @contacts.each do |x| %>
+    <h4><a><%= x.name %></a></h4>
     <% end %>
 
-  </div> -->
+  </div>
 </form>

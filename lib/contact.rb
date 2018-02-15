@@ -7,10 +7,10 @@ class Contact
   attr_accessor :address
   attr_accessor :city
 
-  def initialize (name, address, city)
-    @name = name
-    @address = address
-    @city = city
+  def initialize (attributes)
+    @name = attributes.fetch(:name)
+    @address = attributes.fetch(:address)
+    @city = attributes.fetch(:city)
   end
 
   def upcase
@@ -22,7 +22,6 @@ class Contact
   end
 
   def save
-    # binding.pry
     @@people.push(self)
   end
 
